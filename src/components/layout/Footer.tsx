@@ -48,6 +48,7 @@ export default function Footer() {
               <li><Link href="/#harga" className="hover:text-white transition-colors">Harga</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Kebijakan Privasi</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Syarat & Ketentuan</Link></li>
+              <li><Link href="/kebijakan-refund" className="hover:text-white transition-colors">Kebijakan Refund</Link></li>
               <li><a href="mailto:hello@tryoutku.id" className="hover:text-white transition-colors">Hubungi Kami</a></li>
             </ul>
           </div>
