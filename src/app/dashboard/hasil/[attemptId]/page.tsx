@@ -6,6 +6,7 @@ import Button from '@/components/ui/Button'
 import { getGradeBg, getGradeLabel } from '@/lib/utils'
 import AdBanner from '@/components/ads/AdBanner'
 import DownloadPDFButton from '@/components/tryout/DownloadPDFButton'
+import ShareResultButton from '@/components/tryout/ShareResultButton'
 
 export default async function HasilPage({ params }: { params: Promise<{ attemptId: string }> }) {
   const { attemptId } = await params
@@ -59,6 +60,16 @@ export default async function HasilPage({ params }: { params: Promise<{ attemptI
         </div>
         <div className="text-lg font-bold">{getGradeLabel(persentase)}</div>
         <div className="text-indigo-200 text-sm mt-1">{attempt.skor} / {attempt.skor_maksimal} poin</div>
+        <div className="mt-4">
+          <ShareResultButton
+            tryoutTitle={attempt.tryouts?.title ?? ''}
+            persentase={persentase}
+            gradeLabel={getGradeLabel(persentase)}
+            benar={benar}
+            salah={salah}
+            kosong={kosong}
+          />
+        </div>
       </div>
 
       {/* Ringkasan */}
