@@ -13,26 +13,26 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center shadow-sm">
+              <BookOpen className="w-4.5 h-4.5 text-white" />
             </div>
-            <span className="text-xl font-bold text-indigo-600">TryoutKu</span>
+            <span className="text-xl font-extrabold text-gray-900">Tryout<span className="text-blue-600">Ku</span></span>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
-            <Link href="/#fitur" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors">Fitur</Link>
-            <Link href="/#harga" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors">Harga</Link>
-            <Link href="/#tentang" className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors">Tentang</Link>
+            <Link href="/#fitur" className="text-gray-500 hover:text-blue-600 text-sm font-medium transition-colors">Fitur</Link>
+            <Link href="/#harga" className="text-gray-500 hover:text-blue-600 text-sm font-medium transition-colors">Harga</Link>
+            <Link href="/dashboard" className="text-gray-500 hover:text-blue-600 text-sm font-medium transition-colors">Tryout</Link>
           </div>
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Link href="/login">
-              <Button variant="ghost" size="sm">Masuk</Button>
+              <Button variant="ghost" size="sm" className="text-gray-600">Masuk</Button>
             </Link>
             <Link href="/register">
-              <Button size="sm">Daftar Gratis</Button>
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">Daftar Gratis</Button>
             </Link>
           </div>
 
